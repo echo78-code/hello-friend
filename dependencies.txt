@@ -1,0 +1,9 @@
+pyttsx3
+selenium
+speechrecognition
+
+
+nltk
+matplotlib
+gtts
+playsound
