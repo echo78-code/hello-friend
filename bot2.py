@@ -1,8 +1,7 @@
 from flask import Flask, request
 import requests
 from twilio.twiml.messaging_response import MessagingResponse
-
-constparam = ''
+import json
 
 app = Flask(__name__)
 
@@ -12,11 +11,11 @@ def bot():
     incoming_msg = request.values.get('Body', '').lower()
     resp = MessagingResponse()
     msg = resp.message()
-    
-    constparam = incoming_msg
 
-    print(constparam)
-    msg.body(constparam)
+    with open("data.json", "w") as outfile: 
+        json.dump(str(incoming_msg), outfile)
+
+    msg.body(incoming_msg)
 
     return str(resp)
 
