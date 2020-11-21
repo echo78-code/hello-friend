@@ -13,13 +13,14 @@ virtual assistant chatbot - helps you in regular daily things
   <li> requests</li>
   <li> twilio</li>
   <li> selenium</li>
-  <li> </li>
+  <li> pyaudio</li>
 </ul>
 
 <h2> how to run </h2>
 <ol>
   <li>run ngrok
     <code>ngrok http 8000</code></li>
+  <code>use port forwarding for twilio api</code>
   
   <li>run bot2.py
     <code>py bot2.py</code></li>
